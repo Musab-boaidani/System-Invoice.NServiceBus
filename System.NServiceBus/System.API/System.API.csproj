@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="NewFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NServiceBus" Version="7.7.3" />
+    <PackageReference Include="NServiceBus.Extensions.Hosting" Version="1.1.0" />
+    <PackageReference Include="NServiceBus.Heartbeat" Version="3.0.1" />
+    <PackageReference Include="NServiceBus.Metrics.ServiceControl" Version="3.0.6" />
+    <PackageReference Include="NServiceBus.RabbitMQ" Version="6.1.1" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.15.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\System.Application\System.Application.csproj" />
+    <ProjectReference Include="..\System.Domain\System.Domain.csproj" />
+    <ProjectReference Include="..\System.Persistence\System.Persistence.csproj" />
+  </ItemGroup>
+
+
+</Project>
